@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <div><label for="password">Votre mot de passe : </label><input type="text" name="password" id="password" /></div>
+    <div><label for="confirmPassword">Confirmez : </label><input type="text" name="confirmPassword" id="confirmPassword" /></div>
+    <div><input type="button" name="submit" id="submit" value="Vérification" onclick="checkOut()" /></div>
+  </form>
+
+  <script>
+  function checkOut(){
+    let password = document.getElementById("password")
+    let confirmPassword = document.getElementById("confirmPassword")
+    if(password.value == confirmPassword.value){
+        password.style.border = "1px solid #70ce12"
+        confirmPassword.style.border = "1px solid #70ce12"
+    }
+    else{
+        password.style.border = "1px solid #ce0202"
+        confirmPassword.style.border = "1px solid #ce0202"
+    }
+}
+    
+  </script>
+
+</body>
+</html>

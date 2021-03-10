@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Dynamiser une application</title>
+</head>
+<body>
+    <p>Dans le fichier HTML fourni, au survol de l'image ajouter une bordure de 3px rouge et la retirer quand la souris ne la survole plus.
+    </p>
+    
+    <div>
+        <img id="image1" onmouseover="setNewImage()" onmouseout="setOldImage()"  src="images/image1.jpg"> </img>
+    </div> 
+
+    <script>
+    console.log("test1")
+    let img = document.getElementById("image1")
+    function setNewImage(){
+      img.style.border = "solid 3px red"
+    }
+    function setOldImage(){
+      img.style.border = "none"
+    }
+    </script>
+</body>
+</html>

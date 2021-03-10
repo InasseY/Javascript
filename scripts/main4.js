@@ -1,20 +1,18 @@
-    let nombre1 = prompt("premier nombre à virgule")
-    let nombre2 = prompt("deuxieme nombre à virgule")
-    nombre1 = parseInt(nombre1);
-    function CheckNumber(nombre1,nombre2){
-       if (typeof nombre1, nombre2 == "number" && !isNaN(nombre1, nombre2)){
-           if (Number.isInteger(nombre1, nombre2))
-           {
-             alert("Mettez un nombre à virgule")  
-           }
-           else {
-               alert("c'est un chiffre à virgule")
-           }
-       }
-          else {
-              alert("Ce n'est pas un chiffre")
-          }  
-        }
-    let resultat = nombre1 * nombre2 ;
+    let nombre1 = prompt("premier nombre décimal")
+    let nombre2 = prompt("deuxieme nombre décimal")
+    let regex = /^(-)?[0-9]+\.[0-9]+$/
 
-    alert("Le produit de ces deux nombres est" + resultat)
+    if ( regex.test(nombre1)&& regex.test(nombre2))
+    
+
+    {
+        nombre1 = parseInt(nombre1)
+        let resultat = nombre1 * nombre2 
+        alert("Le résultat  de ces deux nombres est" + resultat)
+    }
+    else 
+    {
+        alert("Les nombres renseignés ne sont pas des nombres décimaux")
+    }
+
+    
